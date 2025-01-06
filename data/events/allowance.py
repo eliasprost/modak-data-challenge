@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 from utils.preprocessor import FileIO
 
-allowance_events_table = FileIO().load_json(
+allowance_events = FileIO().load_json(
     "../data/files/allowance_events.json",
     flatten=True,
 )
 
 # Columns rename
-allowance_events_table.rename(
+allowance_events.rename(
     columns={
         "user.id": "user_uuid",
         "event.timestamp": "event_timestamp",
@@ -20,6 +20,7 @@ allowance_events_table.rename(
 )
 
 # Columns values standardization
-allowance_events_table["event_name"] = allowance_events_table["event_name"].str.replace(
-    "allowance.", ""
+allowance_events["event_name"] = allowance_events["event_name"].str.replace(
+    "allowance.",
+    "",
 )
