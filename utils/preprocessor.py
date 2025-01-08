@@ -59,3 +59,28 @@ class FileIO:
         logger.info(f"Loaded csv file from {file_path}.")
 
         return df
+
+
+class Preprocessor:
+    """
+    Convenience class for preprocessing data.
+    """
+
+    @staticmethod
+    def parse_date(value: str) -> pd.Timestamp:
+        """
+        Parse date from mixed formats.
+
+        Args:
+            value (str): date string
+        """
+        try:
+            # Attempt to parse ISO format (with Z at the end)
+            return pd.to_datetime(value, utc=True)
+        except ValueError:
+            try:
+                # If ISO fails, attempt to parse as UNIX epoch (in seconds)
+                return pd.to_datetime(int(value), unit="s", utc=True)
+            except (ValueError, OverflowError):
+                # Handle any other parsing errors gracefully
+                return pd.NaT
