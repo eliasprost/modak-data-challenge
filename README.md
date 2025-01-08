@@ -1,17 +1,7 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-    - [Modak Data Challenge](#modak-data-challenge)
-- [Setup Instructions](#setup-instructions)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-### Modak Data Challenge
+# Modak Data Challenge
 **Author:** Elias Alcides prost (elias.prost@gmail.com)
 
-
-# Setup Instructions
+## Setup Instructions
 Follow the steps below to set up the repository on your local machine:
 
 1. **Clone the repository:**
@@ -40,3 +30,6 @@ Follow the steps below to set up the repository on your local machine:
      ```
 
 Once you've completed these steps, you are all set to start working with the repository! 🙌
+
+## Submission
+The notebook report is located in the `notebooks` directory. The notebook is named `1-data-discrepancies-report.ipynb`.
